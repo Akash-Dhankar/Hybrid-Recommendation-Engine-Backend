@@ -6,7 +6,7 @@ import co.elastic.clients.elasticsearch.core.search.Hit;
 import com.recomengine.similar_sites_finder.dto.SiteResultDto;
 import com.recomengine.similar_sites_finder.model.SimilarSite.ResultSource;
 import com.recomengine.similar_sites_finder.model.WebsiteDocument;
-import com.recomengine.similar_sites_finder.repository.WebsiteSearchRepository;
+import com.recomengine.similar_sites_finder.repository.elastic.WebsiteSearchRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

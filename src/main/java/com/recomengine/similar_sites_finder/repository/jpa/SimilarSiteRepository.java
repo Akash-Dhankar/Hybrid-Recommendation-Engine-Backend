@@ -1,4 +1,4 @@
-package com.recomengine.similar_sites_finder.repository;
+package com.recomengine.similar_sites_finder.repository.jpa;
 
 import com.recomengine.similar_sites_finder.model.SimilarSite;
 import org.springframework.data.jpa.repository.JpaRepository;

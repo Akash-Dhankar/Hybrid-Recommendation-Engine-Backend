@@ -1,4 +1,4 @@
-package com.recomengine.similar_sites_finder.repository;
+package com.recomengine.similar_sites_finder.repository.elastic;
 
 import com.recomengine.similar_sites_finder.model.WebsiteDocument;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
