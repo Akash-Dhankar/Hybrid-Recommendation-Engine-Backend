@@ -3,7 +3,7 @@ package com.recomengine.similar_sites_finder.service;
 import com.recomengine.similar_sites_finder.dto.SiteResultDto;
 import com.recomengine.similar_sites_finder.model.SimilarSite.ResultSource;
 import com.recomengine.similar_sites_finder.model.Website;
-import com.recomengine.similar_sites_finder.repository.WebsiteRepository;
+import com.recomengine.similar_sites_finder.repository.jpa.WebsiteRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
