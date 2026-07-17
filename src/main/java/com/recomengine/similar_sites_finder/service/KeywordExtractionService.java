@@ -52,8 +52,7 @@ public class KeywordExtractionService {
         return getCategoryForDomain(domain);
     }
 
-    public void storeWebsiteIfNew(String url, String title,
-                                  String keywords, String category) {
+    public void storeWebsiteIfNew(String url,String title,String keywords, String category) {
         String normalizedUrl = normalizeUrl(url);
 
         if (websiteRepository.existsByUrl(normalizedUrl)) {

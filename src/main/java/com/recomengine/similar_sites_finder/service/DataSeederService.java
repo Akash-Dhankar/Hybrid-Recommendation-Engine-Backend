@@ -26,7 +26,6 @@ public class DataSeederService {
         log.info("Seeding ElasticSearch...");
 
         List<WebsiteDocument> websites = List.of(
-                // Technology
                 build("https://github.com", "GitHub",
                         "code repository version control git open-source collaboration",
                         "technology", 1_000_000_000L),

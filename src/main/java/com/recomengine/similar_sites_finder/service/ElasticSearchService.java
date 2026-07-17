@@ -32,9 +32,7 @@ public class ElasticSearchService {
     // ── MAIN SEARCH ───────────────────────────────────────────────
     // Multi-match query across keywords, category, description, title
     // Field boosting: keywords^3 means keyword matches score 3x higher
-    public List<SiteResultDto> findSimilarByKeywords(String url,
-                                                     String keywords,
-                                                     String category) {
+    public List<SiteResultDto> findSimilarByKeywords(String url,String keywords,String category) {
         log.info("ElasticSearch query for url: {}, keywords: {}, category: {}",
                 url, keywords, category);
 
@@ -116,9 +114,8 @@ public class ElasticSearchService {
 
     // ── MAP HITS → DTO ────────────────────────────────────────────
     private List<SiteResultDto> mapHitsToDto(
-            SearchResponse<WebsiteDocument> response,
-            String excludeUrl) {
-
+            SearchResponse<WebsiteDocument> response, String excludeUrl)
+    {
         List<Hit<WebsiteDocument>> hits = response.hits().hits();
         if (hits.isEmpty()) {
             log.debug("ElasticSearch returned 0 hits");
@@ -153,9 +150,8 @@ public class ElasticSearchService {
 
     // ── BUILD QUERY TEXT ──────────────────────────────────────────
     // Combines keywords + category + domain name into one search string
-    private String buildQueryText(String keywords,
-                                  String category,
-                                  String url) {
+    private String buildQueryText(String keywords,String category,String url)
+    {
         StringBuilder sb = new StringBuilder();
 
         if (keywords != null && !keywords.isBlank()) {
